@@ -1,0 +1,153 @@
+:root {
+  --ff-primary: "Inter", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-primary-heading: var(--ff-primary);
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fw-body: var(--fw-400);
+  --fw-primary-heading: var(--fw-700);
+
+  --fs-200: 0.75rem;
+  --fs-400: 0.875rem;
+  --fs-600: 1rem; /* 16px */
+  --fs-700: 1.5625rem;
+
+  --fs-body: var(--fs-600);
+  --fs-primary-heading: var(--fs-700);
+
+  --clr-primary-400: hsla(0, 89%, 66%, 1);
+  --clr-secondary-400: hsla(250, 18%, 19%, 1);
+
+  --clr-grey-200: hsla(254, 6%, 58%, 1);
+  --clr-grey-100: hsla(0, 0%, 96%, 1);
+  --clr-neutral-400: hsla(0, 0%, 100%, 1);
+}
+
+.fw-bold {
+  font-weight: var(--fw-700);
+}
+
+.fw-regular {
+  font-weight: var(--fw-400);
+}
+
+.fw-medium {
+  font-weight: var(--fw-500);
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400);
+  color: var(--clr-secondary-400);
+}
+
+.container {
+  --max-width: 550px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - var(--container-padding) * 2);
+  margin: 0 auto;
+}
+
+/* Header */
+.primary-header {
+  background: var(--clr-primary-400);
+  padding: 16px;
+}
+
+@media (min-width: 35em) {
+  .primary-header {
+    padding: 16px 213px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.logo-img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-text {
+  color: var(--clr-neutral-400);
+}
+
+/* Card */
+.main {
+  padding: 45px 0px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  width: 252px;
+  margin-inline: auto;
+  border-bottom: 1px solid var(--clr-grey-100);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.card:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.card-brief--info,
+.card-post--subinfo,
+.card-post--info {
+  font-size: var(--fs-400);
+}
+
+.card-brief--info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.country {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.google-map--link {
+  margin-left: 8px;
+  color: var(--clr-grey-200);
+}
+
+.card-post {
+  margin-top: 7px;
+}
+
+.card-post--subinfo {
+  margin-top: 14px;
+  display: block;
+}
+
+.card-post--info {
+  margin-top: 9px;
+}
+
+@media (min-width: 35em) {
+  .card {
+    margin-inline: 0;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .card-main--img {
+    max-width: 200px;
+  }
+}
