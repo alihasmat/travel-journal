@@ -1,2 +1,17 @@
 # travel-journal
- Travel Journal made with React
+
+Requirements
+
+- Create a database data.js
+- use map() and props
+- polish the website
+
+## tech stack
+
+- React
+- HTML5
+- CSS3
+
+### Screenshot
+
+![](./screenshot.png)
